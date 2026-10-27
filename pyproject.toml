@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devinadowe-orchcheck"
+version = "0.1.0"
+description = "检查节点参数、连线依赖与环，标出不可达与循环"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "devinadowe" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://devinadowe.github.io"
+Repository = "https://github.com/devinadowe/orchcheck"
+Issues = "https://github.com/devinadowe/orchcheck/issues"
+
+[project.scripts]
+orchcheck = "orchcheck:main"
+
+[tool.setuptools]
+py-modules = ["orchcheck"]
